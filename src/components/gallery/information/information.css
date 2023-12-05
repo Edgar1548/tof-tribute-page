@@ -1,0 +1,48 @@
+
+.pos-relative {
+    position: relative;
+}
+.thumb {
+    height: 100%;
+}
+.thumb {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+.overlay-box {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    z-index: 1;
+    left: 0;
+    padding: 5%;
+    background-image: linear-gradient(to bottom, transparent, #7D8CA3);
+}
+.main-title{
+    display: block;
+    font-weight: 700;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.description {
+    margin-top: 5px;
+    display: block;
+    max-height: 0;
+    line-height: 18px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-out, max-height 0.4s ease-out, margin 0.4s;
+}
+.thumb:hover .description {
+    opacity: 1;
+    max-height: 100px;
+    margin-top: 5px;
+    transition: opacity 0.4s ease-out, max-height 0.9s ease-out
+}
+.thumb:hover img {
+    opacity: 0.6;
+    transition: opacity 0.2s ease-out, max-height 0.9s ease-out
+}
+.thumb:hover .overlay-box {
+    background-image: linear-gradient(to bottom, transparent, var(#7D8CA3));
+}
